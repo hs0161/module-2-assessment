@@ -30,8 +30,14 @@
     'kids'
 */
 
-//CODE HERE
-
+const pizza = {
+    'name': 'cheese',
+    price: 5,
+    'category': 'entree',
+    popularity: 1,
+    rating: 1,
+    'tags': ['plain', 'kids', 'popular']
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -42,7 +48,7 @@
     Use dot notation to access the value.
 */
 
-//CODE HERE
+console.log(pizza.popularity)
 
 
 /*
@@ -52,7 +58,7 @@
     get the value.
 */
 
-//CODE HERE
+console.log(pizza.tags[1])
 
 
 /*
@@ -62,7 +68,8 @@
     Print the value of your new price variable.
 */
 
-//CODE HERE
+let {price} = pizza
+console.log(price)
 
 
 /*
@@ -72,7 +79,8 @@
     Print the value of your category variable. 
 */
 
-//CODE HERE
+let {category} = pizza
+console.log(category)
 
 
 //////////////////PROBLEM 3////////////////////
@@ -87,7 +95,48 @@
     data in some functions that you'll write.
 */
 
-//CODE HERE
+let foodArr = [
+    {
+        name: 'pho',
+        price: 8,
+        category: 'entree',
+        popularity: 5,
+        rating: 8,
+        tags: ['soup', 'noodles']
+    },
+    {
+        name: 'fried rice',
+        price: 10,
+        category: 'entree',
+        popularity: 3,
+        rating: 7,
+        tags: ['asian', 'rice', 'kids']
+    },
+    {
+        name: 'spring rolls',
+        price: 5,
+        category: 'appetizer',
+        popularity: 2,
+        rating: 3,
+        tags: ['gluten-free', 'fresh']
+    },
+    {
+        name: 'galbi',
+        price: 12,
+        category: 'entree',
+        popularity: 6,
+        rating: 9,
+        tags: ['beef', 'korean']
+    },
+    {
+        name: 'mandu',
+        price: 6,
+        category: 'appetizer',
+        popularity: 4,
+        rating: 5,
+        tags: ['dumplings', 'vegetarian', 'korean']
+    }
+]
 
 
 
@@ -103,10 +152,18 @@
     your food objects has.
 */
 
-//CODE HERE
+function getFoodsWithTag(tag){
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+    const filteredFood = foodArr.filter(function(food){
+        return food.tags.includes(tag)
+    })
 
+    return filteredFood
+}
+
+const foods = getFoodsWithTag('korean');
+
+console.log(foods)
 
 
 //////////////////PROBLEM 5////////////////////
@@ -148,7 +205,10 @@
     Return the filtered array from the entire function
 */
 
-//CODE HERE
+function filterByProperty(property, number, type) {
+    let property = rating, popularity, price;
+    
+}
 
 
 /*
