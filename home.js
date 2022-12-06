@@ -66,7 +66,7 @@ function canWeDeliver(zipcode) {
     }
 }
 
-console.log(canWeDeliver(85205))
+console.log(canWeDeliver(85205));
 
 
 /* 
@@ -90,7 +90,7 @@ function canWeDeliverTwo(zipcode) {
     deliveryAreaZipCodes.includes(zipcode)
 }
 
-console.log(canWeDeliver(75052))
+console.log(canWeDeliver(75052));
 
 
 
@@ -127,8 +127,14 @@ const deals = [
     to replace the 15 with a 10.
 */
 
+function changeTitle(newDeal) {
+    newDeal.title = newDeal.title.replace("15", "10");
+}
 
-console.log(deals)
+changeTitle(deals[0]);
+
+console.log(deals[0].title);
+
 
 
 /*
@@ -144,4 +150,11 @@ console.log(deals)
     to be displaying wrong on the live site.
 */
 
-//CODE HERE
+
+function changeDesc(newDesc) {
+    newDesc.desc = newDesc.desc.replace("March", "April");
+}
+
+changeDesc(deals[1]);
+
+console.log(deals[1].desc.trim());
