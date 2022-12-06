@@ -21,12 +21,6 @@
     'Welcome back, Andrew'
 */
 
-// const greetUser = username => {
-//     return 'Welcome back, ' + username
-// }
-//
-// console.log(greetUser('Hannah'))
-
 const greetUser = username => `Welcome back, ${username}`
 
 console.log(greetUser('Hannah'))
@@ -36,6 +30,7 @@ console.log(greetUser('Hannah'))
 
 //////////////////PROBLEM 2////////////////////
 /* 
+
     Below is an array of zip codes that are in
     the restaurant's delivery zone. 
 
