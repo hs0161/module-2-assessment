@@ -33,9 +33,11 @@ const cart = [
     }
 ]
 
-//CODE HERE
 
-const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const summedPrice = cart.map((food) => food.price).reduce((accumulator, currentPrice) => accumulator + currentPrice)
+
+console.log(summedPrice)
+
 
 
 //////////////////PROBLEM 2////////////////////
@@ -54,11 +56,12 @@ const summedPrice = cart.reduce(/* CALLBACK HERE */)
 */
 
 function calcFinalPrice(cartTotal, couponValue, tax) {
-    const tax = cartTotal / .0825
-    const cartTotal = 
-
+    let finalTotal = cartTotal * tax + cartTotal
+    finalTotal -= couponValue
+    return finalTotal
 }
 
+console.log(calcFinalPrice(10, 2, .1))
 
 
 //////////////////PROBLEM 3////////////////////
@@ -82,7 +85,12 @@ function calcFinalPrice(cartTotal, couponValue, tax) {
 */
 
 /*
-    TEXT ANSWER HERE
+   Name: string, so that I can store customer names such as "Hannah Song" to reference them later by name
+   Address: string, same as the name, it can be stored as "2332 Earle Dr" to be able to mail them coupons
+   E-mail: string, the same as address, the restaurant can e-mail coupons and deals weekly
+   Phone: number, to contact the customer for feedback and to store customer information for them to gain points when they come in
+   Favorite foods: array of strings, this will allow the restaurant to take into consideration to the popularity of their customers preferences
+   
 
 */
 
@@ -91,4 +99,10 @@ function calcFinalPrice(cartTotal, couponValue, tax) {
     guidelines.
 */
 
-//CODE HERE
+const customer = {
+    name: "Hannah",
+    address: "2332 Earle Dr",
+    email: "hs0161@yes.com",
+    phone: 2143130205,
+    favoriteFoods: ["spaghetti", "rice", "kimchi"]
+}
